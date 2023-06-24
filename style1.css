@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    width: 1200px;
+    margin: 100px auto;
+
+}
+.title{ 
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+.title h4{
+    text-transform: capitalize;
+    font-size: 36px;
+    position: relative;
+    display:inline-block;
+    padding-bottom: 10px;
+}
+.title h4 span{
+    display: block;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: -10px;
+}
+.title h4:before{
+    position:absolute;
+    content:"";
+    width: 100px;
+    height: 2px;
+    background-color: rgb(161, 161, 168);
+    bottom: 0;
+    left: 180px;
+    transform: translateX(-50%);
+    
+}
+.memu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.single-memu{
+    flex-basis: 580;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+.single-memu:nth-child(5), .single-memu:nth-child(6){
+    border-radius: 0;
+}
+ 
+.single-memu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.single-memu:hover img{
+    border-radius: 0;
+}
+.single-memu img{
+    max-width: 220px;
+    margin-right: 30px;
+    border-radius:10%;
+    border: 1px solid #ddd;
+    padding: 3px;
+    transition: 1s;
+}
+.single-memu h4{
+    text-transform: capitalize;
+    font-size: 22px;
+    border-bottom: 1px dashed #333;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    
+}
+.single-memu h4 span{
+    float: right;
+    color:#696560;
+    font-style: italic;
+}
+ 
