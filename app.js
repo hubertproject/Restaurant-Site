@@ -1,13 +1,16 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyC5Z0OtKlLo93kx_HD2nRxdI5Ye1s2zGZo",
-  authDomain: "ht-auth.firebaseapp.com",
-  databaseURL: "https://ht-auth.firebaseio.com",
-  projectId: "ht-auth",
-  storageBucket: "ht-auth.appspot.com",
-  messagingSenderId: "273822458984",
-  appId: "1:273822458984:web:466fc5daa74cdc9e3407dd",
-  measurementId: "G-JYKHLCBPY2",
-};
+ const firebaseConfig = {
+    apiKey: "AIzaSyAlu3AOTVgybmzCBK9sdt-asDps4n6S7gU",
+    authDomain: "damasr-3a1d1.firebaseapp.com",
+    databaseURL: "https://damasr-3a1d1-default-rtdb.firebaseio.com",
+    projectId: "damasr-3a1d1",
+    storageBucket: "damasr-3a1d1.appspot.com",
+    messagingSenderId: "839492057960",
+    appId: "1:839492057960:web:8d86f502dc72b76e2a74dd",
+    measurementId: "G-KS982BWPMT"
+  };
+
+ 
+ 
 
 var food = "Fried rice and chicken";
 
@@ -18,16 +21,16 @@ var database = firebase.database();
 document.getElementById("form1").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  var fname = document.getElementById("firstname").value;
-  var lname = document.getElementById("lastname").value;
-  var email = document.getElementById("email").value;
+  var fname = document.getElementById("fullname").value;
+  var location = document.getElementById("location").value;
+  var phone = document.getElementById("phone").value;
 
   database
-    .ref("ORDERS/" + lname + fname)
+    .ref("ORDERS/" + location + fname)
     .set({
       fullname: fname,
-      location: lname,
-      phone: email,
+      location: location,
+      phone: phone,
       food: food,
     })
     .then(() => {
@@ -43,7 +46,7 @@ document.getElementById("form1").addEventListener("submit", (e) => {
 
 document.getElementById("cart").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fried rice and chicken";
+  food = "Fried Rice with Grilled Chicken";
 });
 
 document.getElementById("cart2").addEventListener("click", () => {
@@ -53,11 +56,11 @@ document.getElementById("cart2").addEventListener("click", () => {
 
 document.getElementById("cart3").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fries with chicken";
+  food = "French Fries with Chicken";
 });
 document.getElementById("cart4").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fried rice and chicken";
+  food = "Fried Rice with Grilled Chicken";
 });
 
 document.getElementById("cart5").addEventListener("click", () => {
@@ -67,32 +70,32 @@ document.getElementById("cart5").addEventListener("click", () => {
 
 document.getElementById("cart6").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fries with chicken";
+  food = "French Fries with Chicken";
 });
 document.getElementById("cart7").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fries with chicken";
+  food = "Yello Rice with Grilled Chicken";
 });
 document.getElementById("cart8").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fried rice and chicken";
+  food = "Spaghetti Noddles";
 });
 
 document.getElementById("cart9").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Waakye";
+  food = "Chicken Salad";
 });
 document.getElementById("cart10").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fries with chicken";
+  food = "Khebab";
 });
 document.getElementById("cart11").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fries with chicken";
+  food = "Pizza";
 });
 document.getElementById("cart12").addEventListener("click", () => {
   document.getElementById("modal").style.display = "flex";
-  food = "Fried rice and chicken";
+  food = "Jollof Rice With Chicken";
 });
 
 
